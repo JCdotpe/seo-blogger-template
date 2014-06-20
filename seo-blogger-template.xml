@@ -1,64 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html lang='es-ES' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html lang='es-ES' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:fb='https://www.facebook.com/2008/fbml'>
 <head>
-<meta charset='UTF-8'/>
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+  <meta charset='UTF-8'/>
+  <meta expr:content='data:blog.blogId' itemprop='blogId'/>
+  <meta content='241862166012316' property='fb:app_id'/>
 
-
-    <b:if cond='data:blog.pageType == &quot;index&quot;'>
-      <title>
-        <data:blog.pageTitle/>
-      </title>
-      <b:else/>
-      <title>
-        <data:blog.pageName/>
-      </title>
-    </b:if>
-
-    <b:include data='blog' name='all-head-content'/>
-
-    <b:skin><![CDATA[
-      /*
------------------------------------------------
-Blogger Template Style
------------------------------------------------
-Name           : Leo Blogger Template
-Author         : Juan Carlos Sánchez Tapia
-Author  URL    : http://jc.pe/
-Date           : Abril, 2014
------------------------------------------------
-License:
-This free Blogger template is licensed under the Creative Commons Attribution 3.0 License, which permits both personal and commercial use.
-However, to satisfy the 'attribution' clause of the license, you are required to keep the footer links intact which provides due credit to its authors. For more specific details about the license, you may visit the URL below:
-http://creativecommons.org/licenses/by/3.0/
------------------------------------------------ */
-    ]]></b:skin>    
-    
-    <link href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' rel='stylesheet'/>
-    <link href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet'/>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-    <link href='http://cdn.leo.pe/leo.css' rel='stylesheet'/>
-    
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' type='text/javascript'/>
-    <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'/>    
-
-  </head>
-
-<body expr:class='data:blog.pageType' itemscope='itemscope' itemtype='http://schema.org/WebPage'><div class='site-container'>
-
-
-
-  <b:if cond='data:blog.pageType == &quot;index&quot;'>
-    <div itemscope='itemscope' itemtype='http://schema.org/Blog' style='display: none;'>
-      <meta expr:content='data:blog.title' itemprop='name'/>
-      <b:if cond='data:blog.metaDescription'>
-        <meta expr:content='data:blog.metaDescription' itemprop='description'/>
+      <b:if cond='data:blog.pageType == &quot;index&quot;'>
+        <title>
+          <data:blog.pageTitle/>
+        </title>
+        <b:else/>
+        <title>
+          <data:blog.pageName/>
+        </title>
       </b:if>
-    </div>
+
+  <meta content='noodp,noydir' name='robots'/>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+  <link href='http://www.leo.pe/feeds/posts/default?alt=rss' rel='alternate' title='Leo Feed' type='application/rss+xml'/>
+  <link href='http://www.leo.pe/feeds/comments/default?alt=rss' rel='alternate' title='Leo Comments Feed' type='application/rss+xml'/>
+  <b:if cond='data:blog.pageType == &quot;item&quot;'>
+    <link expr:href='&quot;http://www.leo.pe/feeds/&quot;  + data:blog.blogId +  &quot;/comments/default?alt=rss&quot;' expr:title='&quot;Leo - &quot; + data:blog.pageName + &quot; Comments Feed&quot;' rel='alternate' type='application/rss+xml'/>
   </b:if>
+  <b:if cond='data:blog.searchLabel'>
+    <link expr:href='&quot;http://www.leo.pe/feeds/&quot;  + data:blog.pageName +  &quot;/comments/default?alt=rss&quot;' expr:title='&quot;Leo - &quot; + data:blog.pageName + &quot; Comments Feed&quot;' rel='alternate' type='application/rss+xml'/>
+  </b:if>
+  <link expr:href='data:blog.url' rel='canonical'/>
+  <link href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' rel='stylesheet'/>
+  <link href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet'/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+  <link href='http://cdn.leo.pe/leo.css' rel='stylesheet'/>
+
+  <b:skin><![CDATA[
+  /*
+  -----------------------------------------------
+  Blogger Template Style
+  -----------------------------------------------
+  Name           : SEO Blogger Template
+  Author         : Juan Carlos Sánchez Tapia
+  Author  URL    : http://jc.pe/
+  Date           : Abril, 2014
+  -----------------------------------------------
+  License:
+  This free Blogger template is licensed under the Creative Commons Attribution 3.0 License, which permits both personal and commercial use.
+  However, to satisfy the 'attribution' clause of the license, you are required to keep the footer links intact which provides due credit to its authors. For more specific details about the license, you may visit the URL below:
+  http://creativecommons.org/licenses/by/3.0/
+  ----------------------------------------------- */
+
+.site-inner{
+  padding-top: 80px;
+}
 
 
+]]></b:skin>    
+
+  <link href='https://plus.google.com/u/0/108884953497339019425/posts' rel='author'/>  
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' type='text/javascript'/>
+  <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'/>    
+</head><!-- /head -->
+
+<body expr:class='data:blog.pageType + &quot; content-sidebar&quot;' itemscope='itemscope' itemtype='http://schema.org/WebPage'><div class='site-container'>
 
     <header class='navbar navbar-default main-top-nav navbar-fixed-top' role='banner'>
       <div class='container-fluid'>
@@ -70,130 +72,43 @@ http://creativecommons.org/licenses/by/3.0/
             <span class='icon-bar'/>
           </button>
           <b:if cond='data:blog.pageType == &quot;index&quot;'>
-              <div class='title-area'><h1 class='navbar-brand site-title logo' itemprop='headline'><a href='http://www.leo.pe/' title='Leo'>Leo</a></h1></div>
+              <div class='title-area'><h1 class='navbar-brand site-title logo' itemprop='headline'><a href='http://www.leo.pe/' title='Leo.pe'>Leo.pe</a></h1></div>
             <b:else/>
               <div class='title-area'><p class='navbar-brand site-title' itemprop='headline'><a href='http://www.leo.pe/' title='Leo'>Leo</a></p></div>
           </b:if>
         </div>
         <nav class='collapse navbar-collapse bs-navbar-collapse' role='navigation'>
           <ul class='nav navbar-nav'>
-            <li><a href='#'>Negocios</a></li>
-            <li><a href='#'>Forex</a></li>
-            <li><a href='#'>Ganar dinero en internet</a></li>
-            <li><a href='#'>Startups</a></li>
+            <li><a href='#'>Compras y Moda</a></li>
+            <li><a href='#'>Deportes</a></li>
+            <li><a href='#'>Empresas y Política</a></li>
+            <li><a href='#'>Entretenimiento</a></li>
+            <li><a href='#'>Estilo de Vida</a></li>
+            <li><a href='#'>Naturalez y Ciencia</a></li>
+            <li><a href='#'>Viajes y Ocio</a></li>
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="fa fa-search fa-lg"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook fa-lg nav-right-social-icons"></i> <i class="fa fa-twitter fa-lg nav-right-social-icons"></i> <i class="fa fa-google-plus fa-lg"></i></a></li>
+            <li><a href="#"><i class="fa fa-user fa-lg"></i></a></li>            
+          </ul>          
         </nav>
       </div>
     </header>
 
 
-  <div class='site-inner'>
-  <div class='content-sidebar-wrap'>
+  <div class='site-inner container-fluid'>
+  <div class='content-sidebar-wrap row'>
 
 
-
-
-
-    <b:if cond='data:blog.url == data:blog.homepageUrl'>
-      <div class='line-col3'/>
-      <div class='line-col4'/>
-      <script src='http://cdn.leo.pe/post.js'/>     
-      <script type='text/javascript'>var numposts = 15;var showpostthumbnails = true;var displaymore = false;var displayseparator = true;var showcommentnum = false;var showpostdate = true;var showpostsummary = true;var numchars = 250;</script>         
-    </b:if><!-- Only home Lines -->
-
-
-
-       <b:if cond='data:blog.url == data:blog.homepageUrl'>
-
-
-    <div class='site-inner'>
-    <div class='container-fluid' id='container'>
-      <div class='row'>
-
-
-        <main class='content' itemprop='mainContentOfPage' itemscope='itemscope' itemtype='http://schema.org/Blog' role='main'>
-
-        <div class='col-xs-12 col-sm-3 col-md-3 col-lg-3 col-line'>
-
-          <section class='widget featured-content featuredpost' data-key='startups' id='column-startups'>
-
-            <div class='widget-wrap'>
-
-            <h1 class='semantic'>Startups</h1>
-
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.leo.pe//feeds/posts/default/-/Startups?published&amp;alt=json-in-script&amp;callback=labelthumbs&quot;&gt;&lt;/script&gt;
-
-          </div><!-- widget-wrap -->
-
-          </section><!-- section -->
-
-        </div><!-- col-xs-12 col-sm-2 col-md-2 col-lg-2 -->
-
-        <div class='col-xs-12 col-sm-4 col-md-4 col-lg-4 col-line'>
-
-          <section class='widget featured-content featuredpost' data-key='negocios' id='column-negocios'>
-
-            <div class='widget-wrap'>
-
-            <h1 class='semantic'>Negocios</h1>
-          
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.leo.pe//feeds/posts/default/-/Negocios?published&amp;alt=json-in-script&amp;callback=labelthumbs&quot;&gt;&lt;/script&gt;
-
-            </div><!-- widget-wrap -->
-
-          </section><!-- section -->
-
-        </div><!-- col-xs-12 col-sm-4 col-md-4 col-lg-4 -->
-
-        <div class='col-xs-12 col-sm-5 col-md-5 col-lg-5 col-line'>
-
-          <section class='widget featured-content featuredpost' data-key='dinero' id='column-dinero'>
-
-            <div class='widget-wrap'>
-
-            <h1 class='semantic'>Ganar Dinero</h1>
-          
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.leo.pe//feeds/posts/default/-/Dinero?published&amp;alt=json-in-script&amp;callback=labelthumbs&quot;&gt;&lt;/script&gt;
-
-          </div><!-- widget-wrap -->
-
-          </section><!-- section -->
-
-        </div><!-- col-xs-12 col-sm-5 col-md-5 col-lg-5 -->
-
-
-
-          <b:section class='category5' id='category5' preferred='yes' showaddelement='no' title='Category 5'>
-            <b:widget id='HTML5' locked='true' title='' type='HTML'>
-              <b:includable id='main'>
-                <div class='widget-content'>
-                  <data:content/>
-                </div>
-              </b:includable>
-            </b:widget>
-          </b:section><!-- category5 -->
-
-        </main><!-- main -->
-
-
-      </div><!-- row -->
-    </div><!-- container -->
-</div><!-- site-inner -->        
-
-        </b:if><!-- Only home Post -->
-
-
-
-
-       <main class='content' itemprop='mainContentOfPage' itemscope='itemscope' itemtype='http://schema.org/Blog' role='main'>
+<main class='content col-md-8' itemprop='mainContentOfPage' itemscope='itemscope' itemtype='http://schema.org/Blog' role='main'>
 
           <b:section class='main' id='main' showaddelement='no'>
             <b:widget id='Blog1' locked='true' title='Entradas del blog' type='Blog'>
               <b:includable id='main' var='top'>
-  <b:if cond='data:mobile == &quot;false&quot;'>
 
-    <!-- posts -->
-    <div class='blog-posts hfeed'>
+
+  <b:if cond='data:mobile == &quot;false&quot;'>
 
       <b:include data='top' name='status-message'/>
 
@@ -204,24 +119,17 @@ http://creativecommons.org/licenses/by/3.0/
             &lt;/div&gt;&lt;/div&gt;
           </b:if>
         </b:if>
-        <b:if cond='data:post.isDateStart'>
-          &lt;div class=&quot;date-outer&quot;&gt;
-        </b:if>
-        <b:if cond='data:post.dateHeader'>
-          <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
-        </b:if>
-        <b:if cond='data:post.isDateStart'>
-          &lt;div class=&quot;date-posts&quot;&gt;
-        </b:if>
-        <div class='post-outer'>
-        <b:include data='post' name='post'/>
-        <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
-          <b:include data='post' name='comment_picker'/>
-        </b:if>
-        <b:if cond='data:blog.pageType == &quot;item&quot;'>
-          <b:include data='post' name='comment_picker'/>
-        </b:if>
-        </div>
+        
+
+        
+          <b:include data='post' name='post'/>
+          <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+            <b:include data='post' name='comment_picker'/>
+          </b:if>
+          <b:if cond='data:blog.pageType == &quot;item&quot;'>
+            <b:include data='post' name='comment_picker'/>
+          </b:if>
+
         <b:if cond='data:post.includeAd'>
           <b:if cond='data:post.isFirstPost'>
             <data:defaultAdEnd/>
@@ -234,11 +142,9 @@ http://creativecommons.org/licenses/by/3.0/
           <data:adStart/>
         </b:if>
       </b:loop>
-      <b:if cond='data:numPosts != 0'>
-        &lt;/div&gt;&lt;/div&gt;
-      </b:if>
+
+      
       <data:adEnd/>
-    </div>
 
     <!-- navigation -->
     <b:include name='nextprev'/>
@@ -360,10 +266,10 @@ http://creativecommons.org/licenses/by/3.0/
   </b:if>
 </b:includable>
               <b:includable id='comments' var='post'>
-  <div class='comments' id='comments'>
+  <div class='entry-comments comments' id='comments'>
     <a name='comments'/>
     <b:if cond='data:post.allowComments'>
-      <h4><data:post.commentLabelFull/>:</h4>
+      <h3><data:post.commentLabelFull/>:</h3>
 
       <b:if cond='data:post.commentPagingRequired'>
         <span class='paging-control-container'>
@@ -473,7 +379,7 @@ http://creativecommons.org/licenses/by/3.0/
        </b:if>
     </div>
     </div>
-  </div>
+  </div><!-- /entry-comments -->
 </b:includable>
               <b:includable id='feedLinks'>
   <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Blog feed links -->
@@ -736,45 +642,74 @@ http://creativecommons.org/licenses/by/3.0/
   <div class='clear'/>
 </b:includable>
               <b:includable id='post' var='post'>
-  <div class='post hentry uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+
+<article class='post type-post status-publish hentry entry' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+    
     <b:if cond='data:post.firstImageUrl'>
       <meta expr:content='data:post.firstImageUrl' itemprop='image_url'/>
     </b:if>
     <meta expr:content='data:blog.blogId' itemprop='blogId'/>
     <meta expr:content='data:post.id' itemprop='postId'/>
 
+    <div class='post-head'>
+      <b:loop values='data:post.labels' var='label'>
+        <span class='post-labels'><data:label.name/></span>
+      </b:loop>
+      <span class='pull-right'>FOLLOW LEO.PE &gt;</span>
+    </div>
+
     <a expr:name='data:post.id'/>
     <b:if cond='data:post.title'>
-      <h3 class='post-title entry-title' itemprop='name'>
       <b:if cond='data:post.link'>
-        <a expr:href='data:post.link'><data:post.title/></a>
+        <header class='entry-header'>
+          <h2 class='entry-title' itemprop='headline'><a expr:href='data:post.link'><data:post.title/></a></h2>
+              <div class='post-header'>
+                <p><data:post.dateHeader/></p>
+              </div>                                      
+        </header><!-- /entry-header -->
       <b:else/>
         <b:if cond='data:post.url'>
           <b:if cond='data:blog.url != data:post.url'>
-            <a expr:href='data:post.url'><data:post.title/></a>
+            <header class='entry-header'>
+              <h2 class='entry-title' itemprop='headline'><a expr:href='data:post.url'><data:post.title/></a></h2>
+              <div class='post-header'>
+                <p><data:post.dateHeader/></p>
+              </div>                            
+            </header><!-- /entry-header -->
           <b:else/>
-            <data:post.title/>
+            <header class='entry-header'>
+              <h1 class='entry-title' itemprop='headline'><data:post.title/></h1>
+              <div class='post-header'>
+                <p><data:post.dateHeader/></p>
+              </div>              
+            </header><!-- /entry-header -->
           </b:if>
         <b:else/>
-          <data:post.title/>
+          <header class='entry-header'>
+            <h1 class='entry-title' itemprop='headline'><data:post.title/></h1>
+            <div class='post-header'>
+              <p><data:post.dateHeader/></p>
+            </div>            
+          </header><!-- /entry-header -->
         </b:if>
       </b:if>
-      </h3>
     </b:if>
 
-    <div class='post-header'>
-    <div class='post-header-line-1'/>
-    </div>
+
+<a class='facebook' expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url + &quot;&amp;t=&quot; + data:post.title' rel='nofollow' target='_blank' title='Share This On Facebook'>Share via Facebook</a>
+
+<a class='twitter' expr:href='&quot;https://twitter.com/share?url=&quot; + data:post.url + &quot;&amp;title=&quot; + data:post.title' rel='nofollow' target='_blank' title='Tweet This'>Share to Twitter</a>
+
 
     <b:if cond='data:blog.metaDescription == &quot;&quot;'>
       <!-- Then use the post body as the schema.org description,
           for good G+/FB snippeting. -->
-      <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='description articleBody'>
+      <div class='entry-content post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='text'>
         <data:post.body/>
         <div style='clear: both;'/> <!-- clear for photos floats -->
       </div>
     <b:else/>
-      <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+      <div class='entry-content post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='text'>
         <data:post.body/>
         <div style='clear: both;'/> <!-- clear for photos floats -->
       </div>
@@ -786,7 +721,9 @@ http://creativecommons.org/licenses/by/3.0/
       </div>
     </b:if>
 
-    <div class='post-footer'>
+    <hr/>
+
+    <footer class='entry-footer post-footer'>
     <div class='post-footer-line post-footer-line-1'>
       <span class='post-author vcard'>
         <b:if cond='data:top.showAuthor'>
@@ -888,6 +825,19 @@ http://creativecommons.org/licenses/by/3.0/
       </span>
       </div>
 
+
+<hr/>
+
+<b:if cond='data:post.isFirstPost'>   
+<script>(function(d){
+ var js, id = &#39;facebook-jssdk&#39;; if (d.getElementById(id)) {return;}
+ js = d.createElement(&#39;script&#39;); js.id = id; js.async = true;
+ js.src = &quot;//connect.facebook.net/en_US/all.js#xfbml=1&quot;;
+ d.getElementsByTagName(&#39;head&#39;)[0].appendChild(js);
+}(document));</script>
+</b:if>
+<a expr:href='data:post.url + &quot;#fb-root&quot;'><fb:comments-count expr:href='data:post.canonicalUrl'/> comentarios</a>
+
       <div class='post-footer-line post-footer-line-3'>
       <span class='post-location'>
         <b:if cond='data:top.showLocation'>
@@ -898,6 +848,19 @@ http://creativecommons.org/licenses/by/3.0/
         </b:if>
       </span>
       </div>
+
+
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<div id='fb-root'/>
+<script>(function(d){
+ var js, id = &#39;facebook-jssdk&#39;; if (d.getElementById(id)) {return;}
+ js = d.createElement(&#39;script&#39;); js.id = id; js.async = true;
+ js.src = &quot;//connect.facebook.net/en_US/all.js#xfbml=1&quot;;
+ d.getElementsByTagName(&#39;head&#39;)[0].appendChild(js);
+}(document));</script>
+<div style='margin: 20px 0 0 0;'><fb:comments colorscheme='light' expr:href='data:post.canonicalUrl' expr:title='data:post.title' expr:xid='data:post.id' width='900'/></div>
+</b:if>
+
       <b:if cond='data:post.authorAboutMe'>
         <div class='author-profile' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
           <b:if cond='data:post.authorPhoto.url'>
@@ -911,8 +874,9 @@ http://creativecommons.org/licenses/by/3.0/
           <span itemprop='description'><data:post.authorAboutMe/></span>
         </div>
       </b:if>
-    </div>
-  </div>
+    </footer><!-- /footer -->
+
+  </article><!-- /article -->
 </b:includable>
               <b:includable id='postQuickEdit' var='post'>
   <b:if cond='data:post.editUrl'>
@@ -1184,18 +1148,59 @@ http://creativecommons.org/licenses/by/3.0/
             </b:widget>
           </b:section>
 
-          </main><!-- /main -->
+</main><!-- /main -->
 
-<aside class='sidebar sidebar-primary widget-area' itemscope='itemscope' itemtype='http://schema.org/WPSideBar' role='complementary'>
+<aside class='sidebar sidebar-primary widget-area col-md-4' itemscope='itemscope' itemtype='http://schema.org/WPSideBar' role='complementary'>
+
+  <section class='widget like-page-widget' id='like-page-1'>
+    <div class='widget-wrap'>
+      <div class='like-page'>
+          <iframe allowTransparency='true' frameborder='0' scrolling='no' src='//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.leo.pe%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;appId=241862166012316' style='border:none; overflow:hidden; height:21px;'/>
+      </div><!-- /enews -->
+    </div><!-- /widget-wrap -->
+  </section><!-- /section -->
+
+  <section class='widget enews-widget' id='aside-ads-main'>
+    <div class='widget-wrap'>
+      <div class='aside-ads'>
+        <a href="http://e5ab06p71jq5dm3321kizz9xcu.hop.clickbank.net/?tid=LEO.PE" rel="nofollow"><img src="https://storage.googleapis.com/support-kms-prod/SNP_2922281_en_v1" alt="" /></a>
+      </div><!-- /enews -->
+    </div><!-- /widget-wrap -->
+  </section><!-- /section -->     
+
+  <section class='widget featured-content featuredpost' id='trends-content'>
+    <div class='widget-wrap'>
+        <h4 class='widget-title widgettitle'>Trends</h4>
+        <article class="post-394 post type-post status-publish format-standard has-post-thumbnail category-alternative category-country category-hip-hop category-music category-rock-roll entry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+          <a href="#" title="" class="alignnone"><img width="348" height="180" src="http://rack.3.mshcdn.com/media/ZgkyMDE0LzA2LzIwL2NiL1R3aXR0ZXJfQWhoLjhkZDMyLmpwZwpwCXRodW1iCTM2NHgxMzAjCmUJanBn/6b2c4138/a30/Twitter_Ahh.jpg" class="entry-image attachment-post" alt="crowd" itemprop="image" /></a>
+          <header class="entry-header">
+            <h2 class="entry-title"><a href="#" title="">Estos GIFs en Twitter no son en realidad GIFs</a></h2>
+          </header><!-- /header -->
+        </article><!-- /article -->
+    </div><!-- /widget-wrap -->
+  </section><!-- /section -->      
+
   <section class='widget enews-widget' id='enews-ext-4'>
     <div class='widget-wrap'>
       <div class='enews'>
-        <h4 class='widget-title widgettitle'>Ganar Dinero</h4>
-      </div><!-- /enews --> 
-    </div><!-- /widget-wrap --> 
-  </section><!-- /section -->  
-</aside><!-- /aside -->          
+        <h4 class='widget-title widgettitle'>SALUD</h4>
+        <a href="http://434536faqlu21wf6kgsxe9qhnn.hop.clickbank.net/?tid=LEO.PE" rel="nofollow"><img src="https://storage.googleapis.com/support-kms-prod/SNP_2922281_en_v1" alt="" /></a>
+        <a href="http://3dddb7k0tiyzbxc13fqj6401ag.hop.clickbank.net/?tid=LEO.PE" rel="nofollow"><img src="https://storage.googleapis.com/support-kms-prod/SNP_2922281_en_v1" alt="" /></a>
+      </div><!-- /enews -->
+    </div><!-- /widget-wrap -->
+  </section><!-- /section -->    
 
+  <section class='widget enews-widget' id='enews-ext-4'>
+    <div class='widget-wrap'>
+      <div class='enews'>
+        <h4 class='widget-title widgettitle'>SEDUCCIÓN</h4>
+        <a href="http://e5ab06p71jq5dm3321kizz9xcu.hop.clickbank.net/?tid=LEO.PE" rel="nofollow"><img src="https://storage.googleapis.com/support-kms-prod/SNP_2922281_en_v1" alt="" /></a>
+        <a href="http://7dbe4co43h3z3zbokhynoz6pee.hop.clickbank.net/?tid=LEO.PE" rel="nofollow"><img src="https://storage.googleapis.com/support-kms-prod/SNP_2922281_en_v1" alt="" /></a>
+      </div><!-- /enews -->
+    </div><!-- /widget-wrap -->
+  </section><!-- /section -->     
+
+</aside><!-- /aside -->
 
 
         <div class='column-left-outer'>
@@ -1228,13 +1233,12 @@ http://creativecommons.org/licenses/by/3.0/
   </div><!-- content-sidebar-wrap -->
   </div><!-- site-inner -->
 
-<footer id='site-footer' class="site-footer" itemtype="http://schema.org/WPFooter" itemscope="itemscope" role="contentinfo">
-  <div class='wrap container-fluid'>
-    <div class='row'>
+<footer class='site-footer container-fluid' id='site-footer' itemscope='itemscope' itemtype='http://schema.org/WPFooter' role='contentinfo'>
+  <div class='wrap row'>
       <div class='col-md-5'>
       <div class='about'>
         <a expr:href='data:blog.homepageUrl'><strong><data:blog.title/></strong></a>
-      <span class='blurb'>es un blog dedicado a las ideas de negocios innovadoras para emprendedores, con el objetivo de ser una fuente de inspiración para personas que desean formar su propia empresa y de esta manera contribuir a resolver el problema del desempleo. </span>
+      <span class='blurb'> es un sitio web que relata las últimas tendencias más populares en la web.</span>
       </div><!-- /about -->
      </div><!-- /col-md-5 -->
      <div class='col-md-7'>
@@ -1256,7 +1260,6 @@ http://creativecommons.org/licenses/by/3.0/
         <li><a href='#'><i class='fa fa-rss fa-2x'/> </a></li>                                                              
       </ul>
      </div><!-- /col-md-7 -->
-    </div><!-- /row -->
 </div><!-- /wrap -->
 </footer><!-- /footer -->
 
@@ -1264,24 +1267,22 @@ http://creativecommons.org/licenses/by/3.0/
 
 
 <!-- Google Analytics -->
-
 &lt;script&gt;
   (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);
-
   ga(&#39;create&#39;, &#39;UA-50134428-1&#39;, &#39;leo.pe&#39;);
   ga(&#39;send&#39;, &#39;pageview&#39;);
-
 &lt;/script&gt;
+<!-- /Google Analytics -->
 
 &lt;script&gt;
 $(&quot;#column-startups .entry-content&quot;).remove();
 $(&quot;#column-negocios .entry-content&quot;).remove();
 &lt;/script&gt;
 
-<!-- /Google Analytics -->
+
 
 
 </body><!-- /body -->
@@ -1325,6 +1326,5 @@ $(&quot;#column-negocios .entry-content&quot;).remove();
     </macro:if>
   </macro:if>
 </macro:includable>
-
 
 <b:section-contents id='sidebar-right-1'/></html>
